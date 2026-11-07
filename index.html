@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحدي توب 10 الأسطوري - Live Wikipedia & Wikidata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="top-bar">
+        <div class="stat-badge">💰 <span id="goldCoins">100</span> | 🏆 <span id="userRank">مبتدئ 🐣</span></div>
+        <button class="btn-action" id="btnNewQuestion">🎲 تحدي حي جديد (API)</button>
+      </div>
+      <h1 class="logo-title">تحدي توب 10 (Live Engine)</h1>
+    </header>
+
+    <div class="topic-card">
+      <div class="topic-header-tags">
+        <span class="topic-tag" id="topicSource">Wikidata API 🌐</span>
+        <span class="diff-tag" id="topicCategory">عام</span>
+      </div>
+      <h2 class="topic-title" id="topicQuestion">جاري الاتصال بقواعد البيانات العالمية...</h2>
+      <div class="game-status">
+        <div>المتبقي: <span id="foundCount">0</span> / 10</div>
+        <div>⏱️ <span id="timer">00:00</span></div>
+        <div id="hearts">❤️❤️❤️❤️❤️</div>
+      </div>
+    </div>
+
+    <form class="input-section" id="guessForm">
+      <input type="text" id="guessInput" class="input-box" placeholder="اكتب إجابتك هنا (عربي أو إنجليزي)..." autocomplete="off">
+      <button type="submit" class="btn-submit">تأكيد</button>
+    </form>
+
+    <div class="items-grid" id="itemsGrid"></div>
+
+    <div class="controls-bar">
+      <button class="btn-secondary" id="btnHint">💡 تلميح (20 💰)</button>
+      <button class="btn-secondary btn-danger" id="btnGiveUp">🏳️ استسلام وتكشيف</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
